@@ -1,13 +1,123 @@
-body {
+#funiro-app body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#funiro-app .product-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+#funiro-app .product-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#funiro-app .product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+#funiro-app .product-card {
+  width: 270px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+#funiro-app .product-card:hover {
+  transform: translateY(-5px);
+}
+
+#funiro-app .product-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#funiro-app .product-image-container img {
+  width: 100%;
+  display: block;
+}
+
+#funiro-app .badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #eb5757;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+#funiro-app .badge.new {
+  background: #27AE60;
+}
+
+#funiro-app .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+#funiro-app .product-image-container:hover .overlay {
+  transform: translateY(0);
+}
+
+#funiro-app .add-to-cart-btn {
+  background: white;
+  color: #eb5757;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+#funiro-app .product-details {
+  padding: 20px;
+  background: #fff;
+}
+
+#funiro-app .product-details h3 {
+  font-size: 20px;
+  margin: 0 0 5px 0;
+}
+
+#funiro-app .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+#funiro-app .original-price {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+#funiro-app .product-link {
+  color: inherit; /* Keep text color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make whole block clickable */
 }
